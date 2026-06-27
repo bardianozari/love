@@ -68,10 +68,23 @@
 
         audio {
             width: 80%;
-            margin-top: 30px;
+            margin-top: 25px;
+            margin-bottom: 20px;
             border-radius: 50px;
             outline: none;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* استایل اختصاصی برای امضای انتها */
+        .signature {
+            font-size: 1.1em;
+            font-style: italic;
+            color: #c2185b;
+            margin-top: 25px;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeInText 2.5s ease-out forwards;
+            animation-delay: 2s; /* این بخش آخرین المانی است که ظاهر می‌شود */
         }
 
         /* Animations */
@@ -124,6 +137,9 @@
             audio {
                 width: 95%;
             }
+            .signature {
+                font-size: 0.95em;
+            }
         }
     </style>
 </head>
@@ -143,6 +159,10 @@
             <source src="{% static 'voice_msg_3044557850243634775.opus' %}" type="audio/mpeg" >
             مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
         </audio>
+
+        <div class="signature">
+            از طرف آرتین رهدار برای بانوی گمنام
+        </div>
     </div>
 </body>
 </html>
