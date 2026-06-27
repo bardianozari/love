@@ -1,1 +1,1 @@
-web: gunicorn my_romantic_project.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn DjangoProject24.wsgi:application
