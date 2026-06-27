@@ -1,0 +1,31 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="Django" />
+          <option value="asgiref" />
+          <option value="sqlparse" />
+          <option value="tzdata" />
+          <option value="channels" />
+          <option value="channels_redis" />
+          <option value="redis" />
+          <option value="django-cleanup" />
+          <option value="django-cors-headers" />
+          <option value="django-jalali" />
+          <option value="django-simple-captcha" />
+          <option value="django-ranged-response" />
+          <option value="pillow" />
+          <option value="whitenoise" />
+          <option value="python-dotenv" />
+          <option value="requests" />
+          <option value="Khayyam" />
+          <option value="smsir-python" />
+          <option value="mutagen" />
+          <option value="msgpack" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

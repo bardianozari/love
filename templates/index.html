@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لحظاتی برای قلب ما</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap'); /* نمونه برای فونت فارسی */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', 'Arial', sans-serif; /* فونت فارسی Vazirmatn اضافه شد */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); /* گرادیانت صورتی-آبی ملایم */
+            color: #333;
+            overflow: hidden;
+            text-align: center;
+            direction: rtl; /* جهت راست به چپ */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 2s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #d63384; /* صورتی پررنگ‌تر */
+            font-family: 'Vazirmatn', serif; /* فونت خاص‌تر برای عنوان */
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            animation: textPulse 3s infinite alternate;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+            animation: fadeInText 2.5s ease-out forwards;
+            opacity: 0; /* برای انیمیشن fadeInText */
+        }
+
+        p:nth-of-type(1) { animation-delay: 0.5s; }
+        p:nth-of-type(2) { animation-delay: 1s; }
+        p:nth-of-type(3) { animation-delay: 1.5s; }
+
+        .romantic-image {
+            width: 100px;
+            height: auto;
+            margin: 30px auto;
+            display: block;
+            opacity: 0.8;
+            animation: imgScale 4s infinite alternate;
+        }
+
+        audio {
+            width: 80%;
+            margin-top: 30px;
+            border-radius: 50px;
+            outline: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes textPulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.03); }
+        }
+
+        @keyframes imgScale {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .container {
+                padding: 25px;
+                width: 85%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .container {
+                padding: 20px;
+                width: 95%;
+            }
+            audio {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>قلب‌های ما، در این لحظه</h1>
+        <p>
+            در خلوت این صفحه، می‌خواهم زمزمه کنم از عشقی که در هر نگاه و هر لبخند توست.
+            اینجا، فضایی است برای یادآوری تمام لحظاتی که قلب‌هایمان به هم گره خورد، و هر روز را با حضور تو زیباتر ساخت.
+        </p>
+        <p>
+            این ترانه، نوای دل ماست، تا در هر تکرار، عشق ما را جاودانه کند و خاطرات شیرینمان را تازه نگاه دارد.
+            هر نت، داستانی از ماست، از آغاز تا بی‌نهایت.
+        </p>
+        <img src="{% static 'svg-1782587091610.svg' %}" alt="نماد قلب عاشقانه" class="romantic-image">
+        <audio controls autoplay loop>
+            <source src="{% static 'voice_msg_3044557850243634775.opus' %}" type="audio/mpeg" >
+            مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+        </audio>
+    </div>
+</body>
+</html>
